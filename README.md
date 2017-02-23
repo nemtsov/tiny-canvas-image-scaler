@@ -28,7 +28,7 @@ imageScaler.getScaledCanvas(imageUrl, options).then((canvas) => {
 });
 ```
 
-** Options: **
+#### Options:
 
   - `width` - to scale to (height will adjust proportionally)
   - `canvas` - canvas DOM node that will be used to perform the scaling (one will be created, if not provided)
