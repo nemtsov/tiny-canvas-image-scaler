@@ -1,4 +1,4 @@
-# Tiny Canvas Image Scaler [![Build Status](https://img.shields.io/travis/behance/tiny-canvas-image-scaler.svg)](http://travis-ci.org/behance/tiny-canvas-image-scaler) [![NPM version](https://img.shields.io/npm/v/tiny-canvas-image-scaler.svg)](https://www.npmjs.com/package/tiny-canvas-image-scaler) [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
+# Tiny Canvas Image Scaler [![Build Status](https://img.shields.io/travis/behance/tiny-canvas-image-scaler.svg)](http://travis-ci.org/behance/tiny-canvas-image-scaler) [![NPM version](https://img.shields.io/npm/v/tiny-canvas-image-scaler.svg)](https://www.npmjs.com/package/tiny-canvas-image-scaler)
 
 The purpose of this library is to be the smallest canvas-based image-scaling utility.
 
