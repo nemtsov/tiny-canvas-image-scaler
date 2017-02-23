@@ -1,0 +1,39 @@
+{
+  "name": "tiny-canvas-image-scaler",
+  "version": "1.0.0",
+  "description": "Tiny Canvas Image Scaler",
+  "main": "src",
+  "scripts": {
+    "test": "npm run lint && npm run test-watch -- --single-run",
+    "lint": "eslint src/**/*.js test/**/*.js",
+    "test-watch": "env NODE_ENV=test karma start test/karma.conf.js"
+  },
+  "keywords": [
+    "image",
+    "scaler",
+    "canvas"
+  ],
+  "author": "nemtsov@gmail.com",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/behance/tiny-canvas-image-scaler.git"
+  },
+  "devDependencies": {
+    "babel-core": "^6.23.1",
+    "babel-loader": "^6.3.2",
+    "babel-preset-behance": "^6.0.0",
+    "es6-shim": "^0.35.3",
+    "eslint": "^3.16.1",
+    "eslint-plugin-behance": "^1.1.0",
+    "eslint-preset-behance": "^6.0.0",
+    "jasmine-core": "^2.5.2",
+    "karma": "^1.5.0",
+    "karma-coverage": "^1.1.1",
+    "karma-jasmine": "^1.1.0",
+    "karma-phantomjs-launcher": "^1.0.2",
+    "karma-sourcemap-loader": "^0.3.7",
+    "karma-webpack": "^2.0.2",
+    "webpack": "^2.2.1"
+  }
+}
