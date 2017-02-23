@@ -7,7 +7,7 @@ The purpose of this library is to be the smallest canvas-based image-scaling uti
 ```js
 var imageScaler = require('tiny-canvas-image-scaler')
 var options = {
-  width: 300px
+  maxWidth: 300
 };
 
 imageScaler.getScaledUrl(imageUrl, options).then((scaledUrl) => {
@@ -19,7 +19,7 @@ imageScaler.getScaledUrl(imageUrl, options).then((scaledUrl) => {
 ```js
 var imageScaler = require('tiny-canvas-image-scaler')
 var options = {
-  width: 200px
+  maxWidth: 200
 };
 
 imageScaler.getScaledCanvas(imageUrl, options).then((canvas) => {
