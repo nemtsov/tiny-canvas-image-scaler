@@ -30,7 +30,8 @@ imageScaler.getScaledCanvas(imageUrl, options).then((canvas) => {
 
 #### Options:
 
-  - `width` - to scale to (height will adjust proportionally)
+  - `maxWidth` - to scale to (height will adjust proportionally)
+  - `maxHeight` - to scale to (width will adjust proportionally)
   - `canvas` - canvas DOM node that will be used to perform the scaling (one will be created, if not provided)
   - `imageSmoothingEnabled` - property of the canvas context
   - `imageSmoothingQuality` - property of the canvas context

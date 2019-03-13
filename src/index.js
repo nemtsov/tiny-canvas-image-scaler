@@ -1,4 +1,5 @@
 import getLoadedImage from './getLoadedImage';
+import getScaledDimensions from './getScaledDimensions';
 
 function getScaledCanvas(imageUrl, options) {
   let {
@@ -15,17 +16,11 @@ function getScaledCanvas(imageUrl, options) {
 
   return getLoadedImage(imageUrl)
   .then((image) => {
-    if (maxWidth) {
-      maxWidth = (maxWidth < image.width) ? maxWidth : image.width;
-      maxHeight = Math.round(image.height / image.width * maxWidth);
-    }
-    else if (maxHeight) {
-      maxHeight = (maxHeight < image.height) ? maxHeight : image.height;
-      maxWidth = Math.round(image.width / image.height * maxHeight);
-    }
-    else {
+    if (!maxWidth && !maxHeight) {
       throw new Error('either options.maxWidth or options.maxHeight are required');
     }
+
+    [maxWidth, maxHeight] = getScaledDimensions(image, maxWidth, maxHeight);
 
     canvas.width = maxWidth;
     canvas.height = maxHeight;

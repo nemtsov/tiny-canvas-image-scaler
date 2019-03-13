@@ -34,6 +34,30 @@ describe('scaler', function() {
       }, done.fail);
     });
 
+    it('should scale down provided both height and width (width smaller than height)', function(done) {
+      unit.getScaledUrl(starImageUrl, { maxWidth: 4, maxHeight: 8 })
+        .then((scaledUrl) => {
+          return getLoadedImage(scaledUrl)
+          .then((image) => {
+            expect(image.naturalHeight).toEqual(4);
+            expect(image.naturalWidth).toEqual(4);
+            done();
+          });
+        }, done.fail);
+    });
+
+    it('should scale down provided both height and width (height smaller than width)', function(done) {
+      unit.getScaledUrl(starImageUrl, { maxWidth: 8, maxHeight: 4 })
+        .then((scaledUrl) => {
+          return getLoadedImage(scaledUrl)
+          .then((image) => {
+            expect(image.naturalHeight).toEqual(4);
+            expect(image.naturalWidth).toEqual(4);
+            done();
+          });
+        }, done.fail);
+    });
+
     it('should not scale up for height', function(done) {
       unit.getScaledUrl(starImageUrl, { maxHeight: 32 })
       .then((scaledUrl) => {
